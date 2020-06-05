@@ -1,7 +1,7 @@
 # Real-Time Trading System
 
-### Authors: [Peter Eusebio](https://github.com/Pete-Best/), [Julian Kleindiek](https://github.com/ju-kl/), [Markus Wehr](https://github.com/markuswehr/)
-### Date: June 2020
+**Authors:** [Peter Eusebio](https://github.com/Pete-Best/), [Julian Kleindiek](https://github.com/ju-kl/), [Markus Wehr](https://github.com/markuswehr/)
+**Date:** June 2020
 
 GitHub repository for our final project of the 'Real-Time Intelligent Systems' course at the University of Chicago: https://github.com/ju-kl/real_time_trading_system
 
