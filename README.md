@@ -7,26 +7,26 @@ GitHub repository for our final project of the 'Real-Time Intelligent Systems' c
 
 In this project, we built a real-time trading system that is capable of interacting with a fictitious stock market. Our trading system receives  market updates from a server and makes decisions based on the following three strategies: Correlation Strategy, Classification Strategy, and Cross-Over Strategy. The goal of each strategy is to maximize the return on the invested money. The project is structured along the following parts:
 
-### Server
+### 1. Server
 - **server.py**: ...
 
-### Client
+### 2. Client
 - **client.py**: ...
 
-### Order Book
+### 3. Order Book
 - **limit_order_book.py**: ...
 
-### Portfolio
+### 4. Portfolio
 - **portfolio.py**: ...
 
-### Correlation Strategy
+### 5. Correlation Strategy
 - **correlation_strategy.ipynb**: ...
 - **correlation_strategy.py**: ...
 
-### Classification Strategy
+### 6. Classification Strategy
 - **model_building.py**: ...
 - **gbc.sav**: ...
 - **classification_strategy.py**: ...
 
-### Cross-Over Strategy
+### 7. Cross-Over Strategy
 - **classification_strategy.py**: ...
