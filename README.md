@@ -22,7 +22,7 @@ In this project, we built a real-time trading system that is capable of interact
 
 ### 5. Correlation Strategy
 - **correlation_strategy.ipynb**: The purpose of this notebook is to find pairs of stocks based on the correlation of their daily returns. It outputs the correlated_stocks.csv file including the names of the stocks that have the highest correlation and are hence part of the correlation strategy. The notebook also includes data exploration necessary to code the correlation_strategy.py script.
-- **correlation_strategy.py**: The correlation strategy is implemented as a class that is initialized with the pairs of stocks from the correlated_stocks.csv file. It will handle incoming market updates and return a recommended action based on the delta between the z-scores of the prices between the stock from the incoming market update and its pair.
+- **correlation_strategy.py**: The correlation strategy is implemented as a class that is initialized with the pairs of stocks from the correlated_stocks.csv file. It will handle incoming market updates and return a recommended action based on the delta between the z-scores of the prices between the stock from the incoming market update and its partner symbol.
 
 ### 6. Classification Strategy
 - **model_building.py**: ... @Peter
