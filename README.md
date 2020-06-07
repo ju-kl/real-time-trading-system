@@ -9,25 +9,25 @@ GitHub repository for our final project of the 'Real-Time Intelligent Systems' c
 In this project, we built a real-time trading system that is capable of interacting with a fictitious stock market. Our trading system receives  market updates from a server and makes decisions based on the following three strategies: Correlation Strategy, Classification Strategy, and Cross-Over Strategy. The goal of each strategy is to maximize the return on the invested money. The project is structured along the following parts:
 
 ### 1. Server
-- **server.py**: ...
+- **server.py**: This script establishes a server that sequentially sends approximately 3,300 market updates to clients connected to the server in pre-defined time intervals.
 
 ### 2. Client
-- **client.py**: ...
+- **client.py**: This script establishes the client. The client represents our trading system in that it integrates and executes all of the below scripts. Once a market update is received from the server, the update will be added to the order book. The client then calls one of the different strategies to determine which action to take based on the given market update. Based on this decision, the action will be executed and reflected in the portfolio.
 
 ### 3. Order Book
-- **limit_order_book.py**: ...
+- **limit_order_book.py**: @Markus
 
 ### 4. Portfolio
-- **portfolio.py**: ...
+- **portfolio.py**: The portfolio is implemented as a class that is initialized with a cash amount and the size of any buy order. It is able to execute any transaction based on the respective action defined by the trading strategy (buy/sell/hold). It also interacts with the order book by accessing the market price to buy/sell a stock at. It will return the current cash amount and value of the portfolio every time a market update is received and the respective transaction is executed. The market value of a stock in the portfolio is defined as the average between the lowest ask and the highest bid price for a given stock.
 
 ### 5. Correlation Strategy
-- **correlation_strategy.ipynb**: ...
-- **correlation_strategy.py**: ...
+- **correlation_strategy.ipynb**: The purpose of this notebook is to find pairs of stocks based on the correlation of their daily returns. It outputs the correlated_stocks.csv file including the names of the stocks that have the highest correlation and are hence part of the correlation strategy. The notebook also includes data exploration necessary to code the correlation_strategy.py script.
+- **correlation_strategy.py**: The correlation strategy is implemented as a class that is initialized with the pairs of stocks from the correlated_stocks.csv file. It will handle incoming market updates and return a recommended action based on the delta between the z-scores of the prices between the stock from the incoming market update and its pair.
 
 ### 6. Classification Strategy
-- **model_building.py**: ...
-- **gbc.sav**: ...
-- **classification_strategy.py**: ...
+- **model_building.py**: ... @Peter
+- **gbc.sav**: ... @Peter
+- **classification_strategy.py**: ... @Peter
 
 ### 7. Cross-Over Strategy
-- **classification_strategy.py**: ...
+- **classification_strategy.py**: ... @Peter
