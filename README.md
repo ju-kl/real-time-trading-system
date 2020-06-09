@@ -24,10 +24,7 @@ In this project, we built a real-time trading system that is capable of interact
 - **correlation_strategy.ipynb**: The purpose of this notebook is to find pairs of stocks based on the correlation of their daily returns. It outputs the correlated_stocks.csv file including the names of the stocks that have the highest correlation and are hence part of the correlation strategy. The notebook also includes data exploration necessary to code the correlation_strategy.py script.
 - **correlation_strategy.py**: The correlation strategy is implemented as a class that is initialized with the pairs of stocks from the correlated_stocks.csv file. It will handle incoming market updates and return a recommended action based on the delta between the z-scores of the prices between the stock from the incoming market update and its partner symbol.
 
-### 6. Classification Strategy
-- **model_building.py**: ... @Peter
-- **gbc.sav**: ... @Peter
-- **classification_strategy.py**: ... @Peter
-
-### 7. Cross-Over Strategy
-- **classification_strategy.py**: ... @Peter
+### 6. Classification Strategy and Crossover Strategy
+- **model_building.py**: ... This script takes the finance.csv data, extracts features from it, and trains a gradient boosting classifier which it saves as gbc.sav.  This script was included because version issues can cause pickled models not to work on different devices, and it allows you to build the model with your own package versions.
+- **gbc.sav**: ... This is a gradient boosting classifier that is called in classification_strategy.py.
+- **classification_strategy.py**: ... This defines two classes that are trading strategies.  Each class has an instance attribute that is a dict which stores a dataframe for each company.  When the handle_market_order method is given an order, it is inserted into that dataframe, which keeps the 10 most recent orders.  It will also extract different features depending on which strategy class is used, and will return "buy", "hold", or "sell" when called, using either a simple moving average crossover strategy or the gradient boosting classifier.
