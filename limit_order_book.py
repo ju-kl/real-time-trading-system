@@ -10,8 +10,6 @@ class Orderbook():
         self._ask_book = {}
         self._ask_book_prices = []
         self._ask_order_ids = []
-        self.confirm_trade_collector = []
-        self._sip_collector = [] # private list of dictionaries containing best bid and ask prices along with size
         self.trade_book = [] # list of dictionaries with details for each trade
         self._order_index = 0 # unique order ids
         self.traded = False # trade occured or not
@@ -141,7 +139,6 @@ class Orderbook():
     def _match_trade(self, order):
         """Match orders to generate trades and update books accordingly"""
         self.traded = True
-        self.confirm_trade_collector.clear()
         if order['Side'] == 'B':
             book_prices = self._ask_book_prices
             book_ids = self._ask_order_ids
@@ -177,5 +174,5 @@ class Orderbook():
                         self.add_order_to_book(order)
                         break
                 else:
-                    print('Bid Market Collapse with order {0}'.format(order))
+                    print('Bid market collapsed for order {0}'.format(order))
                     break
