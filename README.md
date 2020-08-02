@@ -4,7 +4,7 @@
 
 **Date:** June 2020
 
-GitHub repository for our final project of the 'Real-Time Intelligent Systems' course at the University of Chicago: https://github.com/ju-kl/real_time_trading_system
+GitHub repository for our final project of the 'Real-Time Intelligent Systems' course at the University of Chicago: https://github.com/ju-kl/real-time-trading-system
 
 In this project, we built a real-time trading system that is capable of interacting with a fictitious stock market. Our trading system receives  market updates from a server and makes decisions based on the following three strategies: Correlation Strategy, Classification Strategy, and Cross-Over Strategy. The goal of each strategy is to maximize the return on the invested money. The project is structured along the following parts:
 
